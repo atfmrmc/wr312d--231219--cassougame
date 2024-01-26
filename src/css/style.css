@@ -1,0 +1,20 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff7eb;
+}
+body main#colors--grid {
+  aspect-ratio: 1/1;
+  height: 80vmin;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+body main#colors--grid .colored--square {
+  border: 1px solid red;
+  background-color: goldenrod;
+}
+
+/*# sourceMappingURL=style.css.map */
