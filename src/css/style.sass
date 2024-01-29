@@ -50,8 +50,9 @@ body
     z-index: -100
     pointer-events: none
     user-select: none
+    user-focus: none
 
-  section
+  section.section-drag
     position: relative
     flex: 1
     display: flex
@@ -64,11 +65,15 @@ body
       justify-content: space-between
       padding: 10px 16px
       background-color: $black
+      border-radius: 6px 6px 0 0
 
       .window-bar--name, .window-bar--btns
         display: flex
         gap: 10px
         color: $beige
+
+    &:last-of-type
+      max-width: 42%
 
     #leeDiv
       height: 100%
@@ -77,11 +82,18 @@ body
       justify-content: center
       overflow: hidden
 
-      #lee
-        height: 68%
+      img.lee-img
+        position: absolute
+        height: 100%
+        pointer-events: none
+        user-select: none
+        pointer-events: none
+        user-select: none
+        user-focus: none
 
-      & > .bg
+      & > img.bg
         z-index: -50
+        border-radius: 6px
 
     #items
       height: 100%
@@ -89,16 +101,15 @@ body
       display: flex
       flex-wrap: wrap
       padding: $grup2
-      gap: $grup1
 
       .item
         z-index: 100
         display: flex
         flex-direction: column
         height: min-content
-        padding: $grup1 $grup2
+        padding: $grup1
         gap: $grup
-        color: $beige
+        color: #fff
         border-radius: $grup
         cursor: grab
 
@@ -106,5 +117,5 @@ body
           font-size: $grup5
 
         &:hover
-          background-color: #0c88b4
-          color: $beige
+          background-color: rgba(105, 105, 105, 0.68)
+          outline: 1px solid #868686
