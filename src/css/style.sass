@@ -1,16 +1,110 @@
+$grup6: 17.94rem
+$grup5: 11.09rem
+$grup4: 6.85rem
+$grup3: 4.24rem
+$grup2: 2.62rem
+$grup1: 1.62rem
+$grup: 1rem
+$grup-1: 0.62rem
+$grup-2: 0.38rem
+$grup-3: 0.24rem
+$grup-4: 0.15rem
+$grup-5: 0.09rem
+$grup-6: 0.06rem
+$smooth1: 0.10s
+$smooth2: 0.16s
+$smooth3: 0.26s
+$opacity: 68%
+
+$black: #262626
+$beige: #fff7eb
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  scroll-behavior: smooth
+  font-family: 'Quicksand', sans-serif
+
+html
+  overflow-x: hidden
+
 body
-  min-height: 100vh
+  height: 100vh
   display: flex
-  align-items: center
-  justify-content: center
+  padding: 10vmin
+  gap: 10vmin
   overflow: hidden
-  background-color: #fff7eb
+  color: $black
+  background-color: $beige
 
-  main#colors--grid
-    aspect-ratio: 1/1
-    height: 80vmin
-    display: grid
-    grid-template-columns: repeat(10, 1fr)
+  .bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
 
-    .colored--square
-      background-color: goldenrod
+  & > .bg
+    z-index: -100
+    pointer-events: none
+    user-select: none
+
+  section
+    position: relative
+    flex: 1
+    display: flex
+    flex-direction: column
+    border: 2px solid $black
+    border-radius: 10px
+
+    .window-bar
+      display: flex
+      justify-content: space-between
+      padding: 10px 16px
+      background-color: $black
+
+      .window-bar--name, .window-bar--btns
+        display: flex
+        gap: 10px
+        color: $beige
+
+    #leeDiv
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+
+      #lee
+        height: 68%
+
+      & > .bg
+        z-index: -50
+
+    #items
+      height: 100%
+      background-color: #3f4144
+      display: flex
+      flex-wrap: wrap
+      padding: $grup2
+      gap: $grup1
+
+      .item
+        z-index: 100
+        display: flex
+        flex-direction: column
+        height: min-content
+        padding: $grup1 $grup2
+        gap: $grup
+        color: $beige
+        border-radius: $grup
+        cursor: grab
+
+        i
+          font-size: $grup5
+
+        &:hover
+          background-color: #0c88b4
+          color: $beige

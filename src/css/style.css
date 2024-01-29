@@ -1,19 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Quicksand", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  padding: 10vmin;
+  gap: 10vmin;
+  overflow: hidden;
+  color: #262626;
+  background-color: #fff7eb;
+}
+body .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body > .bg {
+  z-index: -100;
+  pointer-events: none;
+  user-select: none;
+}
+body section {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #262626;
+  border-radius: 10px;
+}
+body section .window-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background-color: #262626;
+}
+body section .window-bar .window-bar--name, body section .window-bar .window-bar--btns {
+  display: flex;
+  gap: 10px;
+  color: #fff7eb;
+}
+body section #leeDiv {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #fff7eb;
 }
-body main#colors--grid {
-  aspect-ratio: 1/1;
-  height: 80vmin;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+body section #leeDiv #lee {
+  height: 68%;
 }
-body main#colors--grid .colored--square {
-  background-color: goldenrod;
+body section #leeDiv > .bg {
+  z-index: -50;
+}
+body section #items {
+  height: 100%;
+  background-color: #3f4144;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.62rem;
+  gap: 1.62rem;
+}
+body section #items .item {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  padding: 1.62rem 2.62rem;
+  gap: 1rem;
+  color: #fff7eb;
+  border-radius: 1rem;
+  cursor: grab;
+}
+body section #items .item i {
+  font-size: 11.09rem;
+}
+body section #items .item:hover {
+  background-color: #0c88b4;
+  color: #fff7eb;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,14 +4,52 @@
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link href="./css/style.css" rel="stylesheet"/>
-    <script src="/jquery-3.7.1.min.js" type='module'></script>
-    <script src="/jquery-ui-1.13.2/jquery-ui.js" type='module'></script>
-    <script src="./js/click-drag.js" type='module'></script>
+    <script src="/jquery/jquery-3.7.1.min.js" type='module'></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/9d34ec166c.js"></script>
+    <script src="/jquery/jquery-ui-1.13.2/jquery-ui.js" type='module'></script>
+    <script src="./js/lee.js" type='module'></script>
     <title>Cassougame</title>
 </head>
 <body>
-<main id='colors--grid'>
 
-</main>
+<section>
+    <div class='window-bar'>
+        <div class='window-bar--name'>
+            <i class="fa-solid fa-bone"></i>
+            <p>lee.exe</p>
+        </div>
+        <div class='window-bar--btns'>
+            <i class="fa-solid fa-minus"></i>
+            <i class="fa-regular fa-square"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+    <div id='leeDiv'>
+        <img alt="Lee" id='lee' src="/img/lee/lee-basic.png"/>
+        <img alt="Background" class='bg' src="/img/background/leebg.svg"/>
+    </div>
+</section>
+<section>
+    <div class='window-bar'>
+        <div class='window-bar--name'>
+            <i class="fa-regular fa-folder"></i>
+            <p>mods</p>
+        </div>
+        <div class='window-bar--btns'>
+            <i class="fa-solid fa-minus"></i>
+            <i class="fa-regular fa-square"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+    <div id='items'>
+        <a class='item eyes'>
+            <i class="fa-solid fa-file-zipper"></i>
+            <p>beautiful-gaze.zip</p>
+        </a>
+    </div>
+</section>
+
+<img alt="background" class='bg' src="/img/background/windowsbg.jpg"/>
+
 </body>
 </html>
