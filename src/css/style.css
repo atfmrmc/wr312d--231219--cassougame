@@ -68,38 +68,47 @@ body section.section-drag #leeDiv img.lee-img {
   height: 100%;
   pointer-events: none;
   user-select: none;
-  pointer-events: none;
-  user-select: none;
   user-focus: none;
 }
 body section.section-drag #leeDiv > img.bg {
   z-index: -50;
   border-radius: 6px;
 }
+body section.section-drag #leeDiv.lee-rgb img.lee-img {
+  animation: rgb 1.62s linear infinite;
+}
 body section.section-drag #items {
   height: 100%;
   background-color: #3f4144;
   display: flex;
-  flex-wrap: wrap;
-  padding: 2.62rem;
+  flex-direction: column;
+  padding: 1rem;
 }
 body section.section-drag #items .item {
   z-index: 100;
   display: flex;
-  flex-direction: column;
   height: min-content;
-  padding: 1.62rem;
+  padding: 0.62rem 1.62rem;
   gap: 1rem;
   color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.38rem;
   cursor: grab;
 }
 body section.section-drag #items .item i {
-  font-size: 11.09rem;
+  font-size: 1.62rem;
 }
 body section.section-drag #items .item:hover {
   background-color: rgba(105, 105, 105, 0.68);
   outline: 1px solid #868686;
+}
+
+@keyframes rgb {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

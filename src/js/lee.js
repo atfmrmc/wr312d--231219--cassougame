@@ -26,13 +26,19 @@ $('#leeDiv').droppable({
             ui.draggable.remove();
 
             if (ui.draggable.hasClass('eyes')) {
-                $('#leeDiv').append('<img alt="Eyes" src="/img/lee/lee-eyes.png" class="lee-img lee-eyes"/>');
+                $('#leeDiv').append('<img alt="Eyes" src="./img/lee/lee-eyes.webp" class="lee-img lee-eyes"/>');
             }
             if (ui.draggable.hasClass('mini')) {
-                $('#leeDiv').append('<img alt="Mini Lee" src="/img/lee/lee-mini.png" class="lee-img lee-mini"/>');
+                $('#leeDiv').append('<img alt="Mini Lee" src="./img/lee/lee-mini.webp" class="lee-img lee-mini"/>');
             }
             if (ui.draggable.hasClass('slee')) {
-                $('#leeDiv').append('<img alt="Mouth" src="/img/lee/lee-cooper.png" class="lee-img lee-mouth"/>');
+                $('#leeDiv').append('<img alt="Mouth" src="./img/lee/lee-cooper.webp" class="lee-img lee-mouth"/>');
+            }
+            if (ui.draggable.hasClass('rgb')) {
+                $('#leeDiv').addClass('lee-rgb');
+            }
+            if (ui.draggable.hasClass('windows')) {
+                $('#leeDiv img.bg').attr('src', './img/background/windowsbg.webp');
             }
         }
     }

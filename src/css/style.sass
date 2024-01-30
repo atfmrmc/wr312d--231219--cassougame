@@ -87,35 +87,44 @@ body
         height: 100%
         pointer-events: none
         user-select: none
-        pointer-events: none
-        user-select: none
         user-focus: none
 
       & > img.bg
         z-index: -50
         border-radius: 6px
 
+      &.lee-rgb
+        img.lee-img
+          animation: rgb 1.62s linear infinite
+
     #items
       height: 100%
       background-color: #3f4144
       display: flex
-      flex-wrap: wrap
-      padding: $grup2
+      flex-direction: column
+      padding: $grup
+
 
       .item
         z-index: 100
         display: flex
-        flex-direction: column
         height: min-content
-        padding: $grup1
+        padding: $grup-1 $grup1
         gap: $grup
         color: #fff
-        border-radius: $grup
+        border-radius: $grup-2
         cursor: grab
 
         i
-          font-size: $grup5
+          font-size: $grup1
 
         &:hover
           background-color: rgba(105, 105, 105, 0.68)
           outline: 1px solid #868686
+
+/// ANIMATION
+@keyframes rgb
+  0%
+    filter: hue-rotate(0deg)
+  100%
+    filter: hue-rotate(360deg)
